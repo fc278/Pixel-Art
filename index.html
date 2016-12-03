@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  
+  <script src="http://breathing-halftone.desandro.com/dist/breathing-halftone.pkgd.js"></script>
+  
+  <link href='http://fonts.googleapis.com/css?family=Schoolbell' rel='stylesheet' type='text/css'>
+  
+  <title>Pixel Art</title>
+  <div class ="divider"> <MARQUEE BEHAVIOR=ALTERNATE> <h1 class="h1"> Photo Pixelator! </h1> </MARQUEE BEHAVIOR> </div>
+<style id="jsbin-css">
+body {
+  cursor: crosshair;
+  background-image: url('http://wallpoper.com/images/00/24/30/86/textures_00243086.jpg')
+}
+
+.h1 {
+  color: blue;
+  font-family: 'Schoolbell', cursive;
+  font-size: 60px;
+}
+h1:hover {
+  -webkit-stroke-width: 5.3px;
+  -webkit-stroke-color: #48D1CC;
+  -webkit-fill-color: #48D1CC;
+   text-shadow: 1px 0px 20px purple;
+}
+.divider {
+  box-shadow: 10px 10px 5px #888888;
+  border: dashed;
+  border-color: blue;
+  margin-left: 120px;
+  margin-right: 120px;
+  background: linear-gradient(90deg, #1abc9c 15%, #2ecc71 15%, #2ecc71 12%, #3498db 12%, #3498db 32%, #9b59b6 32%, #9b59b6 35%, #34495e 35%, #34495e 55%, #f1c40f 55%, #f1c40f 59%, #e67e22 59%, #e67e22 63%, #e74c3c 63%, #e74c3c 82%, #ecf0f1 82%, #ecf0f1 92%, #95a5a6 92%);
+}
+
+.divider2:hover {
+  font-weight: bold;
+}
+
+.textblock {
+  margin-left: auto;
+  margin-right: auto;
+  width: 6em
+  font-family: 'Schoolbell', cursive;
+  font-size: 25px;
+  display:block;
+}
+
+.p {
+  font-family: 'Schoolbell', cursive;
+}
+
+canvas {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 600px;
+}
+</style>
+</head>
+  
+<body>
+  <br > <br />
+  <div> 
+   <div class="textblock">
+    <div class="divider2">
+    <p class="p">
+      Please upload a photo:<br>
+     </p>
+      </div>
+      <div> <input id="input" type="file" name="datafile" size="40"> </div>
+     <img id="image">
+      <br > <br />
+
+<script id="jsbin-javascript">
+document.getElementById("input").onchange = function(input) {
+  if (input.target.files && input.target.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          
+document.getElementById('image').style.display = 'inline';
+          
+var c = document.querySelector('canvas');
+          
+if (c === null) {
+  document.querySelector('canvas');
+} 
+          else {
+            c.parentNode.removeChild(c);
+          }
+            
+var img = $('#image')[0];
+
+var img1 = document.querySelector('#hero image');
+          document.getElementById("image").src = e.target.result;
+          
+         console.log(BreathingHalftone);
+new BreathingHalftone(img);
+          
+        };
+        reader.readAsDataURL(input.target.files[0]);
+    }
+};
+</script>
+
+<script id="jsbin-source-html" type="text/html"><!DOCTYPE html>
+<html>
+<head>
+  
+<script src="//code.jquery.com/jquery-1.11.1.min.js"><\/script>
+  
+  <script src="http://breathing-halftone.desandro.com/dist/breathing-halftone.pkgd.js"><\/script>
+  
+  <link href='http://fonts.googleapis.com/css?family=Schoolbell' rel='stylesheet' type='text/css'>
+  
+  <title>Pixel Art</title>
+  <div class ="divider"> <MARQUEE BEHAVIOR=ALTERNATE> <h1 class="h1"> Photo Pixelator! </h1> </MARQUEE BEHAVIOR> </div>
+</head>
+  
+<body>
+  <br > <br />
+  <div> 
+   <div class="textblock">
+    <div class="divider2">
+    <p class="p">
+      Please upload a photo:<br>
+     </p>
+      </div>
+      <div> <input id="input" type="file" name="datafile" size="40"> </div>
+     <img id="image">
+      <br > <br />
+
+</body>
+  </html></script>
+
+<script id="jsbin-source-css" type="text/css">body {
+  cursor: crosshair;
+  background-image: url('http://wallpoper.com/images/00/24/30/86/textures_00243086.jpg')
+}
+
+.h1 {
+  color: blue;
+  font-family: 'Schoolbell', cursive;
+  font-size: 60px;
+}
+h1:hover {
+  -webkit-stroke-width: 5.3px;
+  -webkit-stroke-color: #48D1CC;
+  -webkit-fill-color: #48D1CC;
+   text-shadow: 1px 0px 20px purple;
+}
+.divider {
+  box-shadow: 10px 10px 5px #888888;
+  border: dashed;
+  border-color: blue;
+  margin-left: 120px;
+  margin-right: 120px;
+  background: linear-gradient(90deg, #1abc9c 15%, #2ecc71 15%, #2ecc71 12%, #3498db 12%, #3498db 32%, #9b59b6 32%, #9b59b6 35%, #34495e 35%, #34495e 55%, #f1c40f 55%, #f1c40f 59%, #e67e22 59%, #e67e22 63%, #e74c3c 63%, #e74c3c 82%, #ecf0f1 82%, #ecf0f1 92%, #95a5a6 92%);
+}
+
+.divider2:hover {
+  font-weight: bold;
+}
+
+.textblock {
+  margin-left: auto;
+  margin-right: auto;
+  width: 6em
+  font-family: 'Schoolbell', cursive;
+  font-size: 25px;
+  display:block;
+}
+
+.p {
+  font-family: 'Schoolbell', cursive;
+}
+
+canvas {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 800px;
+}</script>
+
+<script id="jsbin-source-javascript" type="text/javascript">document.getElementById("input").onchange = function(input) {
+  if (input.target.files && input.target.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          
+document.getElementById('image').style.display = 'inline';
+          
+var c = document.querySelector('canvas');
+          
+if (c === null) {
+  document.querySelector('canvas');
+} 
+          else {
+            c.parentNode.removeChild(c);
+          }
+            
+var img = $('#image')[0];
+
+var img1 = document.querySelector('#hero image');
+          document.getElementById("image").src = e.target.result;
+          
+         console.log(BreathingHalftone);
+new BreathingHalftone(img);
+          
+        };
+        reader.readAsDataURL(input.target.files[0]);
+    }
+};</script></body>
+  </html>
